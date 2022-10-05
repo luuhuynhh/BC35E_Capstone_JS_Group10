@@ -1,0 +1,59 @@
+#header {
+    .navbar {
+        background-color: black;
+        color: white;
+
+        .number {
+            color: white;
+            margin-left: .5rem;
+            font-weight: 500;
+        }
+
+        .nav-link {
+            color: white;
+        }
+
+        ul.navbar-nav {
+            align-items: center;
+        }
+    }
+
+    ul.nav-index {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        margin-left: 1.5rem;
+        padding: 1rem 0px;
+        position: absolute;
+        z-index: 777;
+
+        li {
+            margin-right: 1.5rem;
+            position: relative;
+
+            a {
+                color: black;
+            }
+
+            &::after {
+                content: "";
+                width: 0%;
+                height: 1px;
+                background-color: black;
+                position: absolute;
+                bottom: -.5rem;
+                left: 0;
+                transition: all .5s;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+
+        li.active::after {
+            width: 100%;
+        }
+
+    }
+}

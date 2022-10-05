@@ -1,0 +1,18 @@
+#carouselExampleIndicators {
+    max-height: 400px;
+
+    .carousel-item {
+        width: 80%;
+        padding: 0 5rem;
+    }
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    h5,
+    p {
+        color: black;
+    }
+}

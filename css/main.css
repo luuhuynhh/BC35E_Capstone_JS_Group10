@@ -4,4 +4,99 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+a:hover {
+  text-decoration: none;
+}
+
+html,
+body {
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+#header .navbar {
+  background-color: black;
+  color: white;
+}
+
+#header .navbar .number {
+  color: white;
+  margin-left: .5rem;
+  font-weight: 500;
+}
+
+#header .navbar .nav-link {
+  color: white;
+}
+
+#header .navbar ul.navbar-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header ul.nav-index {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 1.5rem;
+  padding: 1rem 0px;
+  position: absolute;
+  z-index: 777;
+}
+
+#header ul.nav-index li {
+  margin-right: 1.5rem;
+  position: relative;
+}
+
+#header ul.nav-index li a {
+  color: black;
+}
+
+#header ul.nav-index li::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  bottom: -.5rem;
+  left: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#header ul.nav-index li:hover::after {
+  width: 100%;
+}
+
+#header ul.nav-index li.active::after {
+  width: 100%;
+}
+
+#carouselExampleIndicators {
+  max-height: 400px;
+}
+
+#carouselExampleIndicators .carousel-item {
+  width: 80%;
+  padding: 0 5rem;
+}
+
+#carouselExampleIndicators img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#carouselExampleIndicators h5,
+#carouselExampleIndicators p {
+  color: black;
+}
 /*# sourceMappingURL=main.css.map */
