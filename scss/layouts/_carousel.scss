@@ -1,19 +1,22 @@
 #carouselExampleIndicators {
-    height: 500px;
+    height: 540px;
     background-image: url("../../images/bg_carousel.png");
     background-position: bottom left;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 
     .carousel-item {
-        width: 80%;
+        width: 90%;
         padding: 0 5rem;
         position: relative;
 
         .carousel__content {
             position: absolute;
             top: 50%;
-            right: 0;
+            right: -4rem;
+            width: 30%;
+            transform: translateY(-50%);
 
             h5,
             p {
@@ -27,8 +30,9 @@
         }
 
         img {
-            width: 100%;
-            object-fit: contain;
+            width: 60%;
+            object-fit: fill;
+            display: block;
         }
     }
 }
