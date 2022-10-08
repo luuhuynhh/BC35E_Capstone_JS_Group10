@@ -26,9 +26,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0;
   margin: 0 1rem 1rem;
   -webkit-box-flex: 0;
@@ -45,7 +45,7 @@ body {
   margin-right: auto;
   display: block;
   width: 90%;
-  height: 70%;
+  height: 60%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -148,15 +148,16 @@ body {
 }
 
 #carouselExampleIndicators {
-  height: 500px;
+  height: 540px;
   background-image: url("../../images/bg_carousel.png");
   background-position: bottom left;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 #carouselExampleIndicators .carousel-item {
-  width: 80%;
+  width: 90%;
   padding: 0 5rem;
   position: relative;
 }
@@ -164,7 +165,10 @@ body {
 #carouselExampleIndicators .carousel-item .carousel__content {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -4rem;
+  width: 30%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 #carouselExampleIndicators .carousel-item .carousel__content h5,
@@ -178,8 +182,17 @@ body {
 }
 
 #carouselExampleIndicators .carousel-item img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  width: 60%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  display: block;
+}
+
+footer {
+  background-image: url("../../images/footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 270px;
+  background-position: center;
 }
 /*# sourceMappingURL=main.css.map */
