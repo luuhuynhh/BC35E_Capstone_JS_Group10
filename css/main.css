@@ -15,6 +15,73 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.card {
+  background-color: #F8F8F8;
+  border: none;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0;
+  margin: 0 1rem 1rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.33% - 2rem);
+          flex: 0 0 calc(33.33% - 2rem);
+}
+
+.card .product__info {
+  padding: 1rem;
+}
+
+.card img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 90%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card .product__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.card .product__action button,
+.card .product__action span {
+  width: 50%;
+  height: 100%;
+  padding: .5rem;
+}
+
+.card .product__action button {
+  background-color: #E1B067;
+  border: none;
+}
+
+.card .product__action span {
+  background-color: #DEDDDC;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+
 #header .navbar {
   background-color: black;
   color: white;
@@ -81,22 +148,38 @@ body {
 }
 
 #carouselExampleIndicators {
-  max-height: 400px;
+  height: 500px;
+  background-image: url("../../images/bg_carousel.png");
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #carouselExampleIndicators .carousel-item {
   width: 80%;
   padding: 0 5rem;
+  position: relative;
 }
 
-#carouselExampleIndicators img {
+#carouselExampleIndicators .carousel-item .carousel__content {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+#carouselExampleIndicators .carousel-item .carousel__content h5,
+#carouselExampleIndicators .carousel-item .carousel__content p {
+  color: black;
+}
+
+#carouselExampleIndicators .carousel-item .carousel__content .btn-buy {
+  background-color: #F8B653;
+  color: white;
+}
+
+#carouselExampleIndicators .carousel-item img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-#carouselExampleIndicators h5,
-#carouselExampleIndicators p {
-  color: black;
 }
 /*# sourceMappingURL=main.css.map */
