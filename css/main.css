@@ -4,4 +4,182 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+a:hover {
+  text-decoration: none;
+}
+
+html,
+body {
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card {
+  background-color: #F8F8F8;
+  border: none;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0;
+  margin: 0 1rem 1rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.33% - 2rem);
+          flex: 0 0 calc(33.33% - 2rem);
+}
+
+.card .product__info {
+  padding: 1rem;
+}
+
+.card img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 90%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.card .product__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+.card .product__action button,
+.card .product__action span {
+  width: 50%;
+  height: 100%;
+  padding: .5rem;
+}
+
+.card .product__action button {
+  background-color: #E1B067;
+  border: none;
+}
+
+.card .product__action span {
+  background-color: #DEDDDC;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+#header .navbar {
+  background-color: black;
+  color: white;
+}
+
+#header .navbar .number {
+  color: white;
+  margin-left: .5rem;
+  font-weight: 500;
+}
+
+#header .navbar .nav-link {
+  color: white;
+}
+
+#header .navbar ul.navbar-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header ul.nav-index {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 1.5rem;
+  padding: 1rem 0px;
+  position: absolute;
+  z-index: 777;
+}
+
+#header ul.nav-index li {
+  margin-right: 1.5rem;
+  position: relative;
+}
+
+#header ul.nav-index li a {
+  color: black;
+}
+
+#header ul.nav-index li::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  bottom: -.5rem;
+  left: 0;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+#header ul.nav-index li:hover::after {
+  width: 100%;
+}
+
+#header ul.nav-index li.active::after {
+  width: 100%;
+}
+
+#carouselExampleIndicators {
+  height: 500px;
+  background-image: url("../../images/bg_carousel.png");
+  background-position: bottom left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#carouselExampleIndicators .carousel-item {
+  width: 80%;
+  padding: 0 5rem;
+  position: relative;
+}
+
+#carouselExampleIndicators .carousel-item .carousel__content {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+#carouselExampleIndicators .carousel-item .carousel__content h5,
+#carouselExampleIndicators .carousel-item .carousel__content p {
+  color: black;
+}
+
+#carouselExampleIndicators .carousel-item .carousel__content .btn-buy {
+  background-color: #F8B653;
+  color: white;
+}
+
+#carouselExampleIndicators .carousel-item img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 /*# sourceMappingURL=main.css.map */

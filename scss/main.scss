@@ -1,1 +1,10 @@
-@import "./base/reset"
+// base
+@import "./base/reset";
+
+//components
+@import "./components/card";
+@import "./components/title";
+
+// layouts
+@import "./layouts/header";
+@import "./layouts/carousel";
