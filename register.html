@@ -8,9 +8,115 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <!-- link roboto gg font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+     <!-- fontawesome -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/main.css">
+
   </head>
   <body>
-      Register Page
+      <!-- header -->
+      <header id="header">
+        <div class="navbar navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="Logo cybersoft"></a>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="./images/cart.png" alt="cart"><span class="number">(1)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <!-- <div class="container"> -->
+            <ul class="nav-index">
+              <li class="active"><a href="./index.html">Home</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Kid</a></li>
+              <li><a href="#">Sport</a></li>
+            </ul>
+          <!-- </div> -->
+        </nav>
+      </header>
+      <!-- end header -->
+
+      <!-- form register -->
+      <form action="">
+        <h3>Register</h3>
+        <div class="form__content">
+          <div class="row">
+            <div class="left col-lg-6">
+              <div class="input-group mt-2">
+                <div class="input__wrap">
+                  <input type="text" name="Email" id="inputEmail" placeholder="email">
+                </div>
+                <div id="errEmail"></div>
+              </div>
+              <div class="input-group mt-2">
+                <div class="input__wrap">
+                  <input type="text" name="Password" id="inputPassword" placeholder="password">
+                </div>
+                <div id="errPassword"></div>
+              </div>
+              <div class="input-group mt-2">
+                <div class="input__wrap">
+                  <input type="text" name="ConfirmPassword" id="inputCFPassword" placeholder="confirm password">
+                </div>
+                <div id="errCFPassword"></div>
+              </div>
+            </div>
+            <div class="right col-lg-6">
+              <div class="input-group mt-2">
+                <div class="input__wrap">
+                  <input type="text" name="Name" id="inputName" placeholder="name">
+                </div>
+                <div id="errName"></div>
+              </div>
+              <div class="input-group mt-2">
+                <div class="input__wrap">
+                  <input type="text" name="Phone" id="inputPhone" placeholder="phone">
+                </div>
+                <div id="errPhone"></div>
+              </div>
+              <div class="input-group radio mt-2">
+                <span>Gender</span>
+                <div class="radio_group">
+                  <input type="radio" name="gender" id="male" checked>
+                  <label for="male">Male</label>
+                </div>
+                <div class="radio_group">
+                  <input type="radio" name="gender" id="female">
+                  <label for="female">Female</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-secondary submit" type="submit">Submit</button>
+      </form>
+      <!-- end form register -->
+       <!-- footer -->
+       <footer>
+      </footer>
+      <!-- end footer -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

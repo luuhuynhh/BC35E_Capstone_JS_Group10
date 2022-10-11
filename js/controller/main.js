@@ -3,7 +3,7 @@ const renderListProducts = function (arrProducts) {
     for (let i = 0; i < arrProducts.length; i++) {
         let product = arrProducts[i];
         htmlContent += `
-            <div class="card col-lg-4">
+            <div class="card col-lg-4" style="cursor:pointer;">
                 <img class="card-img" src="${product.image}" alt="Card image">
                 <div class="product__content">
                   <div class="product__info">

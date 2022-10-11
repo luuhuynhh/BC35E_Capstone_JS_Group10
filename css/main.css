@@ -195,4 +195,56 @@ footer {
   height: 270px;
   background-position: center;
 }
+
+form {
+  padding: 3rem;
+  position: relative;
+}
+
+form h3 {
+  text-align: center;
+}
+
+form .submit {
+  position: absolute;
+  bottom: 0;
+  right: 40%;
+}
+
+form .form__content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+form .form__content .input__wrap {
+  position: relative;
+  width: 90%;
+}
+
+form .form__content .input__wrap::after {
+  content: "(*)";
+  color: red;
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+form .form__content .input__wrap input {
+  border: none;
+  padding-bottom: .3rem;
+  border-bottom: 2px solid purple;
+  width: 100%;
+}
+
+form .form__content .input__wrap input:focus-visible {
+  outline: none;
+}
+
+form .form__content .radio > * {
+  margin-right: 1.5rem;
+}
+
+footer {
+  margin-top: 3rem;
+}
 /*# sourceMappingURL=main.css.map */
