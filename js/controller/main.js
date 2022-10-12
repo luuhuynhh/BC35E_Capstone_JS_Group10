@@ -11,7 +11,7 @@ const renderListProducts = function (arrProducts) {
                     <p class="card-text">${product.shortDescription}</p>
                   </div>
                   <div class="product__action">
-                    <button>Buy now</button>
+                    <a href="./detail.html?id=${product.id}" class="btn btn-buy">Buy now</a>
                     <span>${product.price}$</span>
                   </div>
                 </div>
@@ -33,7 +33,7 @@ const renderCarousel = function (arrProducts) {
             <div class="carousel__content">
               <h5 class="productName">${product.name}</h5>
               <p class="productDescription">${product.shortDescription}</p>
-              <button class="btn btn-buy">Buy now</button>
+              <a href="./detail.html?id=${product.id}" class="btn btn-buy">Buy now</a>
             </div>
         </div>
         `;

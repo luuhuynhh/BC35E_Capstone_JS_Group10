@@ -1,0 +1,122 @@
+function Validation() {
+    this.kiemTraRong = function (value, idErr, mess) {
+        if (value.trim() === "") {
+            $$(idErr).innerHTML = mess;
+            $$(idErr).style.display = "block";
+            return false;
+        }
+
+        $$(idErr).style.display = "none";
+        return true;
+    }
+
+    this.kiemTraEmail = function (email) {
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (email.match(mailformat)) {
+            alert("Valid email address!");
+            document.form1.text1.focus();
+            return true;
+        }
+        else {
+            alert("You have entered an invalid email address!");
+            document.form1.text1.focus();
+            return false;
+        }
+
+    }
+
+    this.kiemTraChucVu = function (idSelect, idErr, mess) {
+        if ($$(idSelect).selectedIndex !== 0) {
+            $$(idErr).innerHTML = mess;
+            $$(idErr).style.display = "block";
+            return false;
+        }
+
+        $$(idErr).style.display = "none";
+        return true;
+    }
+
+    this.kiemTraDoDaiKiTu = function (value, idErr, mess, min, max) {
+        if (value.length < min || value.length > max) {
+            $$(idErr).innerHTML = mess;
+            $$(idErr).style.display = "block";
+            return false;
+        }
+
+        $$(idErr).style.display = "none";
+        return true;
+    }
+
+    this.kiemTraChuoiKiTu = function (value, idErr, mess) {
+        var letter =
+            "^[a-zA-Z_ÀÁÂÃÈÉÊẾÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" +
+            "ẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" +
+            "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$";
+
+        if (value.match(letter)) {
+            $$(idErr).style.display = "none";
+            return true;
+        }
+
+        $$(idErr).innerHTML = mess;
+        $$(idErr).style.display = "block";
+        return false;
+    };
+
+    this.kiemTraEmail = function (value, idErr, mess) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+            $$(idErr).style.display = "none";
+            return true;
+        }
+
+        $$(idErr).innerHTML = mess;
+        $$(idErr).style.display = "block";
+        return false;
+    }
+
+    this.kiemTraMatKhau = function (value, idErr, mess) {
+        var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[A-Z]).{6,10}$/;
+
+        if (re.test(value)) {
+            $$(idErr).style.display = "none";
+            return true;
+        }
+
+        $$(idErr).innerHTML = mess;
+        $$(idErr).style.display = "block";
+        return false;
+    }
+
+    this.kiemTraKhoangGiaTri = function (value, idErr, mess, min, max) {
+        if (Number(value) < min || Number(value) > max) {
+            $$(idErr).innerHTML = mess;
+            $$(idErr).style.display = "block";
+            return false;
+        }
+
+        $$(idErr).style.display = "none";
+        return true;
+    }
+
+    this.kiemTraMaNVTrung = function (value, idErr, mess, arr) {
+        var isExist = false;
+
+        for (var i = 0; i < arr.length; i++) {
+            var sv = arr[i];
+            if (sv.taiKhoan === value) {
+                isExist = true;
+                break;
+            }
+        }
+
+        if (isExist) {
+            $$(idErr).innerHTML = mess;
+            $$(idErr).style.display = "block";
+            return false;
+        }
+
+        $$(idErr).innerHTML = "";
+        $$(idErr).style.display = "none";
+        return true;
+    };
+}
