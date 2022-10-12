@@ -60,14 +60,14 @@ body {
   text-align: center;
 }
 
-.card .product__action button,
+.card .product__action a,
 .card .product__action span {
   width: 50%;
   height: 100%;
   padding: .5rem;
 }
 
-.card .product__action button {
+.card .product__action a {
   background-color: #E1B067;
   border: none;
 }
@@ -246,5 +246,92 @@ form .form__content .radio > * {
 
 footer {
   margin-top: 3rem;
+}
+
+#productDetail {
+  margin: 5rem 3rem;
+}
+
+#productDetail .left {
+  overflow: hidden;
+  background-color: #F8F8F8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#productDetail .left img {
+  width: 230px;
+  height: 255px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#productDetail .right {
+  padding-left: 5rem;
+}
+
+#productDetail .right p.describe {
+  width: 80%;
+}
+
+#productDetail .right .size .label {
+  color: #1ED90E;
+  font-weight: 500;
+}
+
+#productDetail .right .size .sizeBtns button {
+  border: none;
+  background-color: #CCC;
+  width: 2rem;
+  height: 2rem;
+  font-weight: bold;
+  margin-right: 3px;
+}
+
+#productDetail .right .price {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+#productDetail .right .count-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#productDetail .right .count-group > * {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  border: none;
+  font-weight: bold;
+}
+
+#productDetail .right .count-group .count {
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+#productDetail .right .count-group button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#6181F3), color-stop(99.48%, #7C97F5));
+  background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+  color: white;
+}
+
+#productDetail .right .addToCart {
+  background: -webkit-gradient(linear, right top, left top, color-stop(5.14%, rgba(62, 32, 248, 0.9)), color-stop(89.71%, #D017EE));
+  background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+  padding: .3rem .6rem;
+  border: none;
+  color: white;
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

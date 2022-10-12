@@ -8,13 +8,111 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <!-- my css -->
+     <link rel="stylesheet" href="./css/main.css">
   </head>
   <body>
-      Detail Page
+      <!-- header -->
+      <header id="header">
+        <div class="navbar navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="Logo cybersoft"></a>
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="./images/cart.png" alt="cart"><span class="number">(1)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav>
+          <!-- <div class="container"> -->
+            <ul class="nav-index">
+              <li class="active"><a href="./index.html">Home</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Kid</a></li>
+              <li><a href="#">Sport</a></li>
+            </ul>
+          <!-- </div> -->
+        </nav>
+      </header>
+      <!-- end header -->
+
+      <section id="productDetail" class="row">
+        <div class="left col-lg-4">
+          <img  src="./images/shoes1.png" alt="">
+        </div>
+        <div class="right col-lg-8">
+          <h3>Product Name</h3>
+          <p class="describe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis doloribus ut vero amet molestiae vitae itaque? Distinctio expedita cum itaque natus accusamus, quae ipsum suscipit voluptatem aliquid iste sed.</p>
+          <div class="size">
+            <div class="label">Available size</div>
+            <div class="sizeBtns">
+              <button>36</button>
+              <button>37</button>
+              <button>38</button>
+              <button>39</button>
+            </div>
+          </div>
+          <div class="price">85$</div>
+          <div class="count-group">
+            <button class="inc btn">+</button>
+            <div class="count">0</div>
+            <button class="desc btn">-</button>
+          </div>
+          <button class="addToCart">Add To Cart</button>
+        </div>
+      </section>
+
+     <!-- productFeature -->
+     <section id="productFeature">
+      <div class="title">-Product Related-</div>
+      <div class="productFeature__content">
+        <div class="container">
+          <div class="row">
+            <div class="card col-lg-4">
+              <img class="card-img" src="./images/shoes1.png" alt="Card image">
+              <div class="product__content">
+                <div class="product__info">
+                  <h5 class="card-title">Adidas Prophere</h5>
+                  <p class="card-text">short descript ...</p>
+                </div>
+                <div class="product__action">
+                  <button>Buy now</button>
+                  <span>85$</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end productFeature -->
+
+      <!-- footer -->
+      <footer>
+      </footer>
+      <!-- end footer -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js" integrity="sha512-bHeT+z+n8rh9CKrSrbyfbINxu7gsBmSHlDCb3gUF1BjmjDzKhoKspyB71k0CIRBSjE5IVQiMMVBgCWjF60qsvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- my js -->
+    <script src="./js/controller/detail.js"></script>
   </body>
 </html>
