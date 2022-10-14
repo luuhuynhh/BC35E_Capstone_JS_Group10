@@ -1,12 +1,12 @@
 function Validation() {
     this.kiemTraRong = function (value, idErr, mess) {
         if (value.trim() === "") {
-            $$(idErr).innerHTML = mess;
-            $$(idErr).style.display = "block";
+            document.querySelector(idErr).innerHTML = mess;
+            document.querySelector(idErr).style.display = "block";
             return false;
         }
 
-        $$(idErr).style.display = "none";
+        document.querySelector(idErr).style.display = "none";
         return true;
     }
 
@@ -26,24 +26,24 @@ function Validation() {
     }
 
     this.kiemTraChucVu = function (idSelect, idErr, mess) {
-        if ($$(idSelect).selectedIndex !== 0) {
-            $$(idErr).innerHTML = mess;
-            $$(idErr).style.display = "block";
+        if (document.querySelector(idSelect).selectedIndex !== 0) {
+            document.querySelector(idErr).innerHTML = mess;
+            document.querySelector(idErr).style.display = "block";
             return false;
         }
 
-        $$(idErr).style.display = "none";
+        document.querySelector(idErr).style.display = "none";
         return true;
     }
 
     this.kiemTraDoDaiKiTu = function (value, idErr, mess, min, max) {
         if (value.length < min || value.length > max) {
-            $$(idErr).innerHTML = mess;
-            $$(idErr).style.display = "block";
+            document.querySelector(idErr).innerHTML = mess;
+            document.querySelector(idErr).style.display = "block";
             return false;
         }
 
-        $$(idErr).style.display = "none";
+        document.querySelector(idErr).style.display = "none";
         return true;
     }
 
@@ -54,23 +54,23 @@ function Validation() {
             "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$";
 
         if (value.match(letter)) {
-            $$(idErr).style.display = "none";
+            document.querySelector(idErr).style.display = "none";
             return true;
         }
 
-        $$(idErr).innerHTML = mess;
-        $$(idErr).style.display = "block";
+        document.querySelector(idErr).innerHTML = mess;
+        document.querySelector(idErr).style.display = "block";
         return false;
     };
 
     this.kiemTraEmail = function (value, idErr, mess) {
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
-            $$(idErr).style.display = "none";
+            document.querySelector(idErr).style.display = "none";
             return true;
         }
 
-        $$(idErr).innerHTML = mess;
-        $$(idErr).style.display = "block";
+        document.querySelector(idErr).innerHTML = mess;
+        document.querySelector(idErr).style.display = "block";
         return false;
     }
 
@@ -78,23 +78,34 @@ function Validation() {
         var re = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[A-Z]).{6,10}$/;
 
         if (re.test(value)) {
-            $$(idErr).style.display = "none";
+            document.querySelector(idErr).style.display = "none";
             return true;
         }
 
-        $$(idErr).innerHTML = mess;
-        $$(idErr).style.display = "block";
+        document.querySelector(idErr).innerHTML = mess;
+        document.querySelector(idErr).style.display = "block";
         return false;
+    }
+
+    this.kiemTraConfirmMatKhau = function (pass, confirmPass, idErr, mess) {
+        if (pass !== confirmPass) {
+            document.querySelector(idErr).innerHTML = mess;
+            document.querySelector(idErr).style.display = "block";
+            return false;
+        } else {
+            document.querySelector(idErr).style.display = "none";
+            return true;
+        }
     }
 
     this.kiemTraKhoangGiaTri = function (value, idErr, mess, min, max) {
         if (Number(value) < min || Number(value) > max) {
-            $$(idErr).innerHTML = mess;
-            $$(idErr).style.display = "block";
+            document.querySelector(idErr).innerHTML = mess;
+            document.querySelector(idErr).style.display = "block";
             return false;
         }
 
-        $$(idErr).style.display = "none";
+        document.querySelector(idErr).style.display = "none";
         return true;
     }
 
@@ -110,13 +121,13 @@ function Validation() {
         }
 
         if (isExist) {
-            $$(idErr).innerHTML = mess;
-            $$(idErr).style.display = "block";
+            document.querySelector(idErr).innerHTML = mess;
+            document.querySelector(idErr).style.display = "block";
             return false;
         }
 
-        $$(idErr).innerHTML = "";
-        $$(idErr).style.display = "none";
+        document.querySelector(idErr).innerHTML = "";
+        document.querySelector(idErr).style.display = "none";
         return true;
     };
 }
