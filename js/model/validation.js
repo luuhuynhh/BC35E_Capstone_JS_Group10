@@ -10,20 +10,20 @@ function Validation() {
         return true;
     }
 
-    this.kiemTraEmail = function (email) {
-        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        if (email.match(mailformat)) {
-            alert("Valid email address!");
-            document.form1.text1.focus();
-            return true;
-        }
-        else {
-            alert("You have entered an invalid email address!");
-            document.form1.text1.focus();
-            return false;
-        }
+    // this.kiemTraEmail = function (email) {
+    //     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    //     if (email.match(mailformat)) {
+    //         alert("Valid email address!");
+    //         document.form1.text1.focus();
+    //         return true;
+    //     }
+    //     else {
+    //         alert("You have entered an invalid email address!");
+    //         document.form1.text1.focus();
+    //         return false;
+    //     }
 
-    }
+    // }
 
     this.kiemTraChucVu = function (idSelect, idErr, mess) {
         if (document.querySelector(idSelect).selectedIndex !== 0) {

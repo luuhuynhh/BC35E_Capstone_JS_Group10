@@ -197,7 +197,7 @@ footer {
 }
 
 form {
-  padding: 3rem;
+  padding: 5rem 2rem;
   position: relative;
 }
 
@@ -214,6 +214,10 @@ form .submit {
 form .form__content {
   width: 70%;
   margin: 0 auto;
+}
+
+form .form__content .input-group {
+  margin-bottom: 1rem;
 }
 
 form .form__content .input__wrap {
@@ -238,6 +242,11 @@ form .form__content .input__wrap input {
 
 form .form__content .input__wrap input:focus-visible {
   outline: none;
+}
+
+form .form__content .err {
+  font-size: .875rem;
+  color: red;
 }
 
 form .form__content .radio > * {

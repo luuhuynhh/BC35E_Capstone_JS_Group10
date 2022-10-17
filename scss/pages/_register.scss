@@ -1,5 +1,5 @@
 form {
-    padding: 3rem;
+    padding: 5rem 2rem;
     position: relative;
 
     h3 {
@@ -15,6 +15,10 @@ form {
     .form__content {
         width: 70%;
         margin: 0 auto;
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
 
         .input__wrap {
             position: relative;
@@ -38,6 +42,11 @@ form {
                     outline: none;
                 }
             }
+        }
+
+        .err {
+            font-size: .875rem;
+            color: red;
         }
 
         .radio {
