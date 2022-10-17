@@ -1,7 +1,7 @@
-function Account(email, pw, name, phone, gender) {
+function Account(email, pw, name, phone, isMale) {
     this.email = email;
     this.pw = pw;
     this.name = name;
     this.phone = phone;
-    this.gender = gender ? "male" : "female";
+    this.gender = isMale;
 }

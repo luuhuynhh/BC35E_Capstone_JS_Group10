@@ -58,7 +58,7 @@
       <!-- end header -->
 
       <!-- form register -->
-      <form action="">
+      <form>
         <h3>Register</h3>
         <div class="form__content">
           <div class="row">
@@ -67,19 +67,19 @@
                 <div class="input__wrap">
                   <input type="text" name="Email" id="inputEmail" placeholder="email">
                 </div>
-                <div id="errEmail"></div>
+                <i id="errEmail" class="err"></i>
               </div>
               <div class="input-group mt-2">
                 <div class="input__wrap">
                   <input type="text" name="Password" id="inputPassword" placeholder="password">
                 </div>
-                <div id="errPassword"></div>
+                <i id="errPassword" class="err"></i>
               </div>
               <div class="input-group mt-2">
                 <div class="input__wrap">
                   <input type="text" name="ConfirmPassword" id="inputCFPassword" placeholder="confirm password">
                 </div>
-                <div id="errCFPassword"></div>
+                <i id="errCFPassword" class="err"></i>
               </div>
             </div>
             <div class="right col-lg-6">
@@ -87,13 +87,13 @@
                 <div class="input__wrap">
                   <input type="text" name="Name" id="inputName" placeholder="name">
                 </div>
-                <div id="errName"></div>
+                <i id="errName" class="err"></i>
               </div>
               <div class="input-group mt-2">
                 <div class="input__wrap">
                   <input type="text" name="Phone" id="inputPhone" placeholder="phone">
                 </div>
-                <div id="errPhone"></div>
+                <i id="errPhone" class="err"></i>
               </div>
               <div class="input-group radio mt-2">
                 <span>Gender</span>
@@ -109,7 +109,7 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-secondary submit" type="submit">Submit</button>
+        <button class="btn btn-secondary submit" id="submit" type="submit">Submit</button>
       </form>
       <!-- end form register -->
        <!-- footer -->
@@ -122,6 +122,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.2/axios.min.js" integrity="sha512-bHeT+z+n8rh9CKrSrbyfbINxu7gsBmSHlDCb3gUF1BjmjDzKhoKspyB71k0CIRBSjE5IVQiMMVBgCWjF60qsvA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- my js -->
     <script src="./js/model/validation.js"></script>
