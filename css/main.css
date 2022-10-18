@@ -74,6 +74,7 @@ body {
 
 .card .product__action span {
   background-color: #DEDDDC;
+  font-weight: bold;
 }
 
 .title {
@@ -203,6 +204,14 @@ form {
 
 form h3 {
   text-align: center;
+}
+
+form button {
+  background-color: #AE18E2 !important;
+  border: none !important;
+  outline: none;
+  padding: .5rem 2rem !important;
+  border-radius: 0 !important;
 }
 
 form .submit {
