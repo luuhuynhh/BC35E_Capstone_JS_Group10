@@ -6,6 +6,14 @@ form {
         text-align: center;
     }
 
+    button {
+        background-color: #AE18E2 !important;
+        border: none !important;
+        outline: none;
+        padding: .5rem 2rem !important;
+        border-radius: 0 !important;
+    }
+
     .submit {
         position: absolute;
         bottom: 0;
