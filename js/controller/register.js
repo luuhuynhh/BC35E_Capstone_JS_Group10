@@ -1,8 +1,8 @@
 const validation = new Validation();
-let isValid = true;
 // validate password
 const inputPassword = document.querySelector("#inputPassword");
 inputPassword.onkeyup = function () {
+    let isValid = true;
     if (inputPassword.value) {
         isValid &= validation.kiemTraMatKhau(inputPassword.value, "#errPassword", "Mật khẩu từ 6 đến 10 kí tự, gồm ít nhất 1 kí tự in hoa, 1 kí tự đặc biệt!");
     } else {
@@ -13,6 +13,7 @@ inputPassword.onkeyup = function () {
 // validate confirm password
 const inputCFPassword = document.querySelector("#inputCFPassword");
 inputCFPassword.onkeyup = function () {
+    let isValid = true;
     isValid &= validation.kiemTraConfirmMatKhau(inputPassword.value, inputCFPassword.value, "#errCFPassword", "Mật khẩu không khớp!");
 }
 
@@ -20,6 +21,7 @@ inputCFPassword.onkeyup = function () {
 
 const inputEmail = document.querySelector("#inputEmail");
 inputEmail.onkeyup = function () {
+    let isValid = true;
     if (inputEmail.value) {
         isValid &= validation.kiemTraEmail(inputEmail.value, "#errEmail", "Email không đúng định dạng!");
     }
@@ -31,12 +33,14 @@ inputEmail.onkeyup = function () {
 // validate name
 const inputName = document.querySelector("#inputName");
 inputName.onkeyup = function () {
+    let isValid = true;
     isValid &= validation.kiemTraRong(inputName.value, "#errName", "Name không được để trống!");
 }
 
 // validate phone
 const inputPhone = document.querySelector("#inputPhone");
 inputPhone.onkeyup = function () {
+    let isValid = true;
     isValid &= validation.kiemTraRong(inputPhone.value, "#errPhone", "Phone không được để trống!");
 }
 
@@ -51,6 +55,7 @@ const signup = async (account) => {
         return res;
     } catch (err) {
         console.log(err);
+        return null;
     }
 }
 
@@ -63,22 +68,32 @@ const resetForm = () => {
     document.querySelector("#male").checked = true;
 }
 
-document.querySelector("#submit").onclick = function (e) {
+document.querySelector("#submit").onclick = async function (e) {
     e.preventDefault();
-    console.log(isValid);
+    let isValid = true;
     let email = document.querySelector("#inputEmail").value;
     let password = document.querySelector("#inputPassword").value;
     let name = document.querySelector("#inputName").value;
     let phone = document.querySelector("#inputPhone").value;
     let isMale = document.querySelector("#male").checked;
+
+    isValid &= validation.kiemTraMatKhau(inputPassword.value, "#errPassword", "Mật khẩu từ 6 đến 10 kí tự, gồm ít nhất 1 kí tự in hoa, 1 kí tự đặc biệt!");
+    isValid &= validation.kiemTraConfirmMatKhau(inputPassword.value, inputCFPassword.value, "#errCFPassword", "Mật khẩu không khớp!");
+    isValid &= validation.kiemTraEmail(inputEmail.value, "#errEmail", "Email không đúng định dạng!");
+    isValid &= validation.kiemTraRong(inputName.value, "#errName", "Name không được để trống!");
+    isValid &= validation.kiemTraRong(inputPhone.value, "#errPhone", "Phone không được để trống!");
+
     if (isValid) {
         let account = new Account(email, password, name, phone, isMale);
-        const res = signup(account);
+        const res = await signup(account);
+        console.log(res);
         if (res && res.statusText === "OK") {
             alert(res.data.message);
             resetForm();
         } else {
             alert("Đăng ký tài khoản không thành công!");
         }
+    } else {
+        alert("Đăng ký tài khoản không thành công!");
     }
 }
