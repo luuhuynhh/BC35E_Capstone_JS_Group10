@@ -5,7 +5,7 @@ Bài tập: Capstone JS
 Demo capstone JS
 
 Danh sách thành viên nhóm 10:
-- Nguyễn Quang Minh: không làm được bài -> không tham gia làm bài
+- Nguyễn Quang Minh: không làm được bài -> không tham gia làm bài XX
 - Huỳnh Nguyễn Thị Lựu
 
 Kịch bản demo:
@@ -14,7 +14,7 @@ Kịch bản demo:
 	-> Click vào 1 sản phẩm cụ thể để điều hướng đến trang chi tiết sản phẩm
 	Hiển thị danh sách sản phẩm ở section Feature Product
 	-> Click vào 1 sản phẩm cụ thể để điều hướng đến trang chi tiết sản phẩm
-- Ở tramg chi tiết sản phẩm:
+- Ở trang chi tiết sản phẩm:
 	Hiển thị chi tiết sản phẩm
 	Hiển thị danh sách sản phẩm liên quan
 	-> Click vào 1 sản phầm cụ thể để điều hướng đến trang chi tiết sản phẩm
@@ -22,6 +22,9 @@ Kịch bản demo:
 	(Từ trang chủ / trang chi tiết sản phẩm đều điều hướng được đến trang
 	đăng ký tài khoản bằng cách click vào "Register" ở Navbar)
 	Demo validate dữ liệu các ô input
-	Thực hiện đăng ký tài khoản thành công
-	Thực hiện đăng ký tài khoản không thành công (isValid / email đã được đăng ký rồi)
+	Thực hiện đăng ký tài khoản thành công (reset lại các ô input)
+	Thực hiện đăng ký tài khoản không thành công (isValid / email đã được 
+	đăng ký rồi)
+	
+	Cảm ơn thầy / mentor đã xem ạ <3
 	

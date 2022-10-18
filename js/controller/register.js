@@ -82,6 +82,7 @@ document.querySelector("#submit").onclick = async function (e) {
     isValid &= validation.kiemTraEmail(inputEmail.value, "#errEmail", "Email không đúng định dạng!");
     isValid &= validation.kiemTraRong(inputName.value, "#errName", "Name không được để trống!");
     isValid &= validation.kiemTraRong(inputPhone.value, "#errPhone", "Phone không được để trống!");
+    console.log(isValid);
 
     if (isValid) {
         let account = new Account(email, password, name, phone, isMale);
